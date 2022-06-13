@@ -18,3 +18,7 @@ html {
     border: 1px solid black;
     padding: 2px;
 }
+
+#quantity {
+    margin-bottom: 24px;
+}

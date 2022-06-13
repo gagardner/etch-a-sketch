@@ -2,6 +2,8 @@ let gridContainer = document.getElementById("grid-container");
 let gridButton = document.getElementById("grid-button");
 let userInput = document.getElementById("quantity");
 
+
+
 function createSquares(n) {
     if (n > 75) n = 75;
     for (let i = 1; i <= n * n; i++) {
@@ -14,8 +16,9 @@ function createSquares(n) {
 function makeSquaresInteractive() {
     const squares = document.querySelectorAll(".grid-square");
     squares.forEach((square) => {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
         square.addEventListener("mouseenter", function () {
-            square.setAttribute("style", "background-color: green");
+            square.style.backgroundColor = "#" + randomColor;
         });
     });
 }
